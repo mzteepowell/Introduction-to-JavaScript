@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+var votingAge = 18;
+if (votingAge >= 18){
+  console.log(true);
+}
 
 
 /*
@@ -31,9 +34,13 @@ Do the following:
    HINT: no function required
 */
 
+var color1 = 'blue';
+var color2 = 'green';
 
-
-
+if (color2 !== color1) {
+  color1 = 'purple';
+}
+console.log(color1);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -58,11 +65,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
-
+console.log(multiply(5, 4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
