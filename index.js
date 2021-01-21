@@ -153,11 +153,13 @@ console.log(hungryDog(15, 12));
 Create a global variable that randomly generates the computer's choice
 Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
 
-HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
+HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a 
+number when using Math.random()
 
 Use the game function below to do the following:
   1. Receive 2 parameters the user's choice and the computer's choice
-  2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match the strings below exactly.
+  2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned 
+  need to match the strings below exactly.
    - win should return "you win!"
    - lose should return "you lose!"
    - tie should return "it's a tie"
@@ -168,9 +170,24 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+  if (user === computer ){
+    return "it's a tie"
+  }
+else if (user === "rock" && computer !== "paper") {
+  return "you win!"
 }
-  
+else if (user === "paper" && computer !== "scissors") {
+  return "you win!"
+}
+else if (user === "scissors" && computer !== "rock") {
+  return "you win!"
+}
+else {
+  return "you lose!"
+}
+}
+
+console.log(game("scissors", "paper"));
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
