@@ -82,8 +82,8 @@ Do the following:
 */
 
 function dogYears(age){
-    age += age * 7;
-    return age;
+  age = age * 7;
+  return age;
 }
 
 console.log(dogYears(5));
@@ -129,7 +129,7 @@ function hungryDog(weight, ageInMonths){
   else if (ageInMonths >= 1 && weight <  5) {
     return weight * .05;
   }
-  else if (ageInMonths >= 1 && weight >= 6 && weight <=10) {
+  else if (ageInMonths >= 1 && weight >= 6 && weight <= 10) {
     return weight * .04;
   }
   else if (ageInMonths >= 1 && weight >= 11 && weight <= 15) {
@@ -280,7 +280,7 @@ function grade(score){
   }
 }
 
-console.log(grade(99));  
+console.log(grade(59));  
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
