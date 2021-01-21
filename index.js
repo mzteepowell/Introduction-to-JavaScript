@@ -54,7 +54,7 @@ Do the following:
 */
 
 var value = "1999";
-value = parseInt(value);
+value = Number(value);
 console.log(value);
 /*
 Task 1d - Multiply
@@ -117,32 +117,32 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, ageInMonths){
-  if (ageInMonths > (2/12) && ageInMonths <(4/12)) {
+  if (ageInMonths >= (2/12) && ageInMonths <=(4/12)) {
     return weight * .10;
   }
-  else if (ageInMonths >= (4/12) && ageInMonths <(7/12)) {
+  else if (ageInMonths >= (4/12) && ageInMonths <=(7/12)) {
     return weight * .05;
   }
-  else if (ageInMonths >= (7/12) && ageInMonths < 12) {
+  else if (ageInMonths >= (7/12) && ageInMonths < 1) {
     return weight * .04;
   }
-  else if (ageInMonths >= 12 && weight <  5) {
+  else if (ageInMonths >= 1 && weight <  5) {
     return weight * .05;
   }
-  else if (ageInMonths >= 12 && weight >= 6 && weight <=10) {
+  else if (ageInMonths >= 1 && weight >= 6 && weight <=10) {
     return weight * .04;
   }
-  else if (ageInMonths >= 12 && weight >= 11 && weight <= 15) {
+  else if (ageInMonths >= 1 && weight >= 11 && weight <= 15) {
     return weight * .03;
   }
-  else if (ageInMonths > 12 && weight > 15) {   
+  else if (ageInMonths > 1 && weight > 15) {   
     return weight * .02;
   }
   else {
-    console.log("error");
+    return console.log("error");
   }
 }
-console.log(hungryDog(15, 12));
+console.log(hungryDog(15, 1));
 
 
 
@@ -202,7 +202,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-  let miles = kilometers * 0.6213712;
+  let miles = kilometers * 0.621371;
 return miles;
 }
 
@@ -267,16 +267,16 @@ function grade(score){
     return "you got an A";
   }
   else if (score >= 80 && score < 90) {
-    return "you got an B";
+    return "you got a B";
   }
   else if (score >= 70 && score < 80) {
-    return "you got an C";
+    return "you got a C";
   }
-  else if (score >= 60 && score < 70) {
-    return "you got an D";
+  else if (score >= 60 && score <= 69) {
+    return "you got a D";
   }
   else if (score < 60) {
-    return "you got an F";
+    return "you got a F";
   }
 }
 
