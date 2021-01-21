@@ -53,9 +53,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
-
+var value = "1999";
+value = parseInt(value);
+console.log(value);
 /*
 Task 1d - Multiply
  
@@ -81,11 +81,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    age += age * 7;
+    return age;
 }
 
-
+console.log(dogYears(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -93,7 +94,8 @@ function dogYears(/*add your code here*/){
 /*
 Use the hungryDog function and feeding requirements below to do the following:
   1. Invoke the hungryDog function below and pass it a weight value in pounds
-  2. Also, pass to hungryDog an age value in years (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25)
+  2. Also, pass to hungryDog an age value in years (note: if the dog is a puppy, the age will be a decimal. 
+    For example: three months = 3/12 or .25)
   3. Do the proper calculations and return the number of pounds of raw food to feed the dog/puppy in a day
   
   REMEMBER: This program should handle correctly adult AND puppy ages and weights
@@ -114,9 +116,33 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, ageInMonths){
+  if (ageInMonths > (2/12) && ageInMonths <(4/12)) {
+    return weight * .10;
   }
+  else if (ageInMonths >= (4/12) && ageInMonths <(7/12)) {
+    return weight * .05;
+  }
+  else if (ageInMonths >= (7/12) && ageInMonths < 12) {
+    return weight * .04;
+  }
+  else if (ageInMonths >= 12 && weight <  5) {
+    return weight * .05;
+  }
+  else if (ageInMonths >= 12 && weight >= 6 && weight <=10) {
+    return weight * .04;
+  }
+  else if (ageInMonths >= 12 && weight >= 11 && weight <= 15) {
+    return weight * .03;
+  }
+  else if (ageInMonths > 12 && weight > 15) {   
+    return weight * .02;
+  }
+  else {
+    console.log("error");
+  }
+}
+console.log(hungryDog(15, 12));
 
 
 
