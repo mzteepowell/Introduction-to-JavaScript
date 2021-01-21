@@ -219,11 +219,11 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  let feet = cm * 0.0328084;
-return feet;
+  return cm / 30.48;
 }
 
-console.log(feet(150));
+console.log(feet(160));
+  
  
 
 
@@ -238,14 +238,15 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number){
-  let left_over = number;
-    for (let i = 0; i < number; i++){{}
-      console.log(`${number-i} bottles of soda on the wall, ${number-i} bottles of soda take one down pass it around ${--left_over} bottles of soda on the wall`);
+  let counter = number;
+    for (let i = 1; i <= number; i++){
+      console.log(`${number-i} bottles of soda on the wall, ${number-i} bottles of soda,take one down pass it around ${--counter} bottles of soda on the wall`);
       
     }
+    return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${--number} bottles of soda on the wall`;
+      
   }
-  console.log(annoyingSong(4));
-
+console.log(annoyingSong(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -276,12 +277,11 @@ function grade(score){
     return "you got a D";
   }
   else if (score < 60) {
-    return "you got a F";
+    return "you got an F";
   }
 }
 
-console.log(grade(59));  
-  
+console.log(grade(59)); 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
